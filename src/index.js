@@ -19,8 +19,8 @@ const decrement = () => ({ type: DECREMENT });
 
 // 초깃값 설정
 const initialState = {
-  light: false,
-  counter: 0
+  light: true,
+  counter: 713
 };
 
 // 리듀서 함수 정의
