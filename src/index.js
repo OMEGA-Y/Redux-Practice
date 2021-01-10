@@ -19,8 +19,8 @@ const decrement = () => ({ type: DECREMENT });
 
 // 초깃값 설정
 const initialState = {
-  light: true,
-  counter: 713
+  light: false,
+  counter: 0
 };
 
 // 리듀서 함수 정의
@@ -65,3 +65,17 @@ const render = () => {
 };
 
 render();
+
+store.subscribe(render);
+
+switchButton.onclick = () => {
+  store.dispatch(toggleSwitch());
+};
+
+plusButton.onclick = () => {
+  store.dispatch(increment(5));
+};
+
+minusButton.onclick = () => {
+  store.dispatch(decrement());
+};
